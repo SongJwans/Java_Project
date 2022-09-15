@@ -1,4 +1,4 @@
-package Project1;
+package chap01;
 
 import java.awt.BorderLayout;
 import java.awt.Container;

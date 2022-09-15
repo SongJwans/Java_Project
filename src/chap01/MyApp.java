@@ -1,4 +1,4 @@
-package Project1;
+package chap01;
 
 import javax.swing.JFrame;
 
