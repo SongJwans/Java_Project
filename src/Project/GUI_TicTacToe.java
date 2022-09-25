@@ -1,4 +1,5 @@
 package Project;
+
 import java.awt.Container;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -8,7 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-class MyPanel extends JFrame implements ActionListener{
+class MyPanel extends JFrame implements ActionListener {
 	JButton btnArr[][] = new JButton[3][3];
 	int arr[][] = new int[3][3];// player1,2 의 지표
 	int turn = 0;
@@ -26,14 +27,12 @@ class MyPanel extends JFrame implements ActionListener{
 			for (int j = 0; j < 3; j++) {
 				btnArr[i][j] = new JButton();
 				btnArr[i][j].setFont(gameFont);
-				btnArr[i][j].setSize(100, 100);
 				btnArr[i][j].setText(i * 3 + j + 1 + "");
 				btnArr[i][j].addActionListener(this);
 				this.add(btnArr[i][j]);
 				arr[i][j] = 0;
 			}
 		}
-
 		setSize(500, 500);
 		setVisible(true);
 	}
@@ -71,6 +70,9 @@ class MyPanel extends JFrame implements ActionListener{
 					btnArr[i][j].setEnabled(false);
 				}
 			}
+		}
+		if (check() != 1 && check() != 2 && turn == 9) {
+			setTitle("Draw");
 		}
 
 	}

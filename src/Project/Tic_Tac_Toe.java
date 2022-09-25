@@ -31,21 +31,21 @@ public class Tic_Tac_Toe {
 
 			// 틱택토 게임 종료 판단 --- 0
 			int count = 0;
-			boolean playerA = true;
-			boolean playerB = true;
+			boolean player1 = true;
+			boolean player2 = true;
 			for (int i = 0; i < 3; i++)
 				for (int j = 0; j < 3; j++)
 					if (board[i][j] != ' ')
 						count += 1;
 			if (count == 8) {
-				playerB = false;
+				player2 = false;
 			} else if (count == 9) {
-				playerA = false;
+				player1 = false;
 			}
 
-			while (playerA) {
+			while (player1) {
 				// PlayerA 차례
-				System.out.print("Player A: ");
+				System.out.print("Player 1: ");
 				while (true) {
 					try {
 						// 예외 발생 가능성이 있는 코드
@@ -113,10 +113,10 @@ public class Tic_Tac_Toe {
 						System.out.println("---|---|---");
 				}
 
-				// player B가 놓을 위치를 결정 --- 2
-				while (playerB) {
-					// PlayerB 차례
-					System.out.print("Player B: ");
+				// player 2가 놓을 위치를 결정 --- 2
+				while (player2) {
+					// Player2 차례
+					System.out.print("Player 2: ");
 					while (true) {
 						try {
 							// 예외 발생 가능성이 있는 코드
@@ -209,11 +209,11 @@ public class Tic_Tac_Toe {
 		}
 
 		if (player_win == 'y') {
-			System.out.println("플레이어A 승리!");
+			System.out.println("Player1 WIN!");
 		} else if (player_win == 'n') {
-			System.out.println("플레이어B 승리!");
+			System.out.println("Player2 WIN!");
 		} else {
-			System.out.println("비겼습니다!");
+			System.out.println("Draw");
 		}
 	}
 }
