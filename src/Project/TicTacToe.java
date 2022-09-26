@@ -2,7 +2,7 @@ package Project;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Tic_Tac_Toe {
+public class TicTacToe {
 	public static void main(String[] args) {
 
 		char[][] board = new char[3][3]; // 게임판을 나타내는 2차원 배열
