@@ -70,7 +70,7 @@ class MyPanel extends JFrame implements ActionListener {
 					btnArr[i][j].setEnabled(false);
 				}
 			}
-		}
+		}	//turn이 9인데 check()가 1, 2 둘다 해당하지 않으면 비긴다.
 		if (check() != 1 && check() != 2 && turn == 9) {
 			setTitle("Draw");
 		}
