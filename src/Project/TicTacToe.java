@@ -106,13 +106,6 @@ public class Tic_Tac_Toe {
 				} else {
 					board[x][y] = 'O';
 				}
-
-				for (int i = 0; i < 3; i++) {
-					System.out.println("  " + board[i][0] + "|  " + board[i][1] + "|  " + board[i][2]);
-					if (i != 2)
-						System.out.println("---|---|---");
-				}
-
 				// player 2가 놓을 위치를 결정 --- 2
 				while (player2) {
 					// Player2 차례
@@ -168,7 +161,7 @@ public class Tic_Tac_Toe {
 						y = 2;
 						break;
 					}
-					// 컴퓨터가 놓은 위치를 검사 --- 2
+					// Player2가 놓은 위치를 검사 --- 2
 					if (board[x][y] != ' ') {
 						System.out.println("잘못된 위치입니다.");
 						continue;
