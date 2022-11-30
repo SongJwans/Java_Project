@@ -17,7 +17,7 @@ public class BorderLayoutEx extends JFrame {
 
 		c.setLayout(new BorderLayout(30, 20));
 
-		// c.add(new JButton("calculate"), BorderLayout.CENTER);
+		//c.add(new JButton("calculate"), BorderLayout.CENTER);
 		c.add(new JButton("add"), BorderLayout.NORTH);
 		c.add(new JButton("sub"), BorderLayout.SOUTH);
 		c.add(new JButton("mul"), BorderLayout.EAST);
